@@ -1,0 +1,120 @@
+.caixa-1 {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 4px;
+  background: #FFFFFF;
+  background: linear-gradient(266deg, rgba(255, 255, 255, 1) 34%, rgba(240, 236, 236, 1) 55%, rgba(240, 236, 236, 1) 63%, rgba(218, 210, 207, 1) 72%, rgba(77, 48, 27, 1) 98%);
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.welcome-text {
+  padding: 20px;
+  text-align: justify;
+  font-size: 18px;
+  color: #4d301b;
+}
+
+.orcamento {
+  margin-top: 20px;
+  padding: 10px 19px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: none;
+  background-color: #4d301b;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.orcamento:hover {
+  opacity: 0.85;
+}
+
+
+.diferenciais-container {
+  padding: 40px  100px 48px 100px;
+  text-align: center;
+  background-color: #dfdbd7;
+}
+
+.diferenciais-titulo {
+  font-size: 26px;
+  margin-bottom: 40px;
+  color: #4d301b;
+}
+
+.diferenciais-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.diferencial-box {
+  background-color:  #f5f3f0;
+  padding: 22px;
+  border-radius: 18px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.diferencial-box:hover {
+  transform: translateY(-5px);
+}
+
+.diferencial-box h3 {
+  margin-bottom: 10px;
+  color: #4d301b;
+}
+
+.diferencial-box p {
+  color: #4d301b;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  
+  .caixa-1{
+    display: block;
+    background: #f5f3f0;
+  }
+
+  .welcome-text{
+    gap: 0px !important;
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .orcamento {
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    font-size: 18px;
+    padding: 15px 28px;
+  }
+
+  .diferenciais-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diferenciais-titulo {
+    font-size: 26px;
+  }
+
+  .diferenciais-container {
+    padding: 30px  18px 30px 18px;
+  }
+
+}

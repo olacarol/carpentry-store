@@ -1,0 +1,95 @@
+.footer-container {
+    background: #f0ecec;
+    color:#4d301b; 
+    padding: 10px;
+  }
+
+  .top-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center; 
+    gap: 20px;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    height: 80px; 
+  }
+  
+  .logo {
+    width: 130px; 
+    display: block;
+    transform: scale(2.0); 
+    transform-origin: left center;
+  }
+  
+  .endereco {
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  .sociais {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 14px;
+  }
+  
+  .sociais a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+  }
+  
+  .sociais i {
+    font-size: 22px;
+    color: #4d301b;
+  }
+  
+  .sociais a:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  
+  .direitos {
+    text-align: center;
+    margin-top: 12px;
+    opacity: 0.9;
+    font-size: 13px;
+    clear: both;
+    background-color: #4d301b;
+    color: #f0ecec;
+    padding: 10px;
+    margin: 0;
+  }
+
+
+  @media (max-width: 768px) {
+
+    .logo-container {
+      display: none;
+    }
+
+    .top-row {
+      grid-template-columns: 1fr;
+      gap: 0px;
+    }
+  
+    .endereco {
+      font-size: 14px; 
+      width: 100%;
+      padding: 0px 10px 0px 10px;
+      text-align: center;
+    }
+  
+    .sociais {
+      justify-content: center;
+      padding: 5px;
+    }
+  }

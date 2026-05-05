@@ -1,0 +1,103 @@
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background-image: url('/assets/images/textura2.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.success-msg {
+  background: #e6f9f0;
+  color: #1a7f5a;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.error-msg {
+  background: #fdecea;
+  color: #b42318;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    height: auto; 
+    min-height: 80vh;
+  }
+}
+  
+  .contact-card {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+  }
+  
+  .contact-card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #4d301b;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+  }
+  
+  .form-group label {
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #4d301b;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border: 1px solid #4d301b;
+    box-shadow: 0 0 0 2px rgba(77, 48, 27, 0.1);
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .btn-enviar {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    background-color: #4d301b;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-enviar:hover {
+    background-color: #6a4630;
+  }
+
+

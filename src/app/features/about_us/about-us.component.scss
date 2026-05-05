@@ -1,0 +1,50 @@
+.about-container {
+    display: flex;
+    gap: 30px;
+    padding: 50px;
+  }
+  
+  .about-text {
+    max-width: 700px;
+    line-height: 1.6; 
+    margin-top: 0;
+    color: #4d301b;;
+  }
+  
+  .about-text h1 {
+    margin-bottom: 16px;
+  }
+  
+  .about-image img {
+    width: 80vh;
+    border-radius: 2px;
+    margin-top: 3vh;
+  }
+
+  .frase{
+    margin-top: 4vh;
+  }
+
+
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+    }
+  
+    .about-text {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .about-image img {
+      width: 100%;
+      margin-top: 0;
+    }
+  
+    .frase {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }

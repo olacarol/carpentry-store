@@ -1,0 +1,83 @@
+<div class="contact-container">
+  <div class="contact-card">
+    <h2>Fale Conosco</h2>
+
+    <div *ngIf="successMessage" class="success-msg">
+      {{ successMessage }}
+    </div>
+
+    <div *ngIf="errorMessage" class="error-msg">
+      {{ errorMessage }}
+    </div>
+
+    <form #form="ngForm" (ngSubmit)="sendEmail(form)" novalidate>
+
+      <div class="form-group">
+        <label>Nome completo</label>
+        <input 
+          type="text" 
+          placeholder="Seu nome completo"
+          [(ngModel)]="formData.name"
+          name="name"
+          #name="ngModel"
+          required
+        />
+        <div class="error-msg" *ngIf="name.invalid && (name.touched || form.submitted)">
+          O nome é obrigatório.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Telefone</label>
+        <input 
+          type="text" 
+          placeholder="(00) 00000-0000"
+          [(ngModel)]="formData.phone"
+          name="phone"
+          #phone="ngModel"
+          pattern="^[0-9()+\-\s]{8,20}$"
+        />
+        <div class="error-msg" *ngIf="phone.invalid && (phone.touched || form.submitted)">
+          Insira um telefone válido.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input 
+          type="email" 
+          placeholder="seu@email.com"
+          [(ngModel)]="formData.email"
+          name="email"
+          #email="ngModel"
+          required
+          email
+        />
+        <div class="error-msg" *ngIf="email.invalid && (email.touched || form.submitted)">
+          <span *ngIf="email.errors?.['required']">O e-mail é obrigatório.</span>
+          <span *ngIf="email.errors?.['email']">Insira um e-mail válido.</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Mensagem</label>
+        <textarea 
+          rows="4" 
+          placeholder="Escreva sua mensagem..."
+          [(ngModel)]="formData.message"
+          name="message"
+          #message="ngModel"
+          required
+        ></textarea>
+        <div class="error-msg" *ngIf="message.invalid && (message.touched || form.submitted)">
+          A mensagem é obrigatória.
+        </div>
+      </div>
+
+      <button type="submit" class="btn-enviar">
+        Enviar
+      </button>
+
+    </form>
+  </div>
+</div>
